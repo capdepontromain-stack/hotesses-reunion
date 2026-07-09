@@ -119,8 +119,10 @@ footer a{color:var(--or)}
   <div class="wrap">
     <h2>Demandez votre devis en 48 h</h2>
     <p class="sub">Le plus rapide : appelez Ketsia au <a href="tel:+262693491902"><b>06 93 49 19 02</b></a>. Sinon, ce formulaire :</p>
-    <form name="devis-hotesses" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="devis-hotesses">
+    <form name="devis-hotesses" method="POST" action="https://formsubmit.co/romain@pullup.re">
+      <input type="hidden" name="_subject" value="Demande de devis hôtesses (site vitrine)">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://capdepontromain-stack.github.io/hotesses-reunion/?envoye=merci">
       <label for="nom">Votre nom / société</label>
       <input id="nom" name="nom" required>
       <label for="tel">Téléphone</label>
