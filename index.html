@@ -137,10 +137,7 @@ footer a{color:var(--or)}
   <div class="wrap">
     <h2>Demandez votre devis en 48 h</h2>
     <p class="sub">Le plus rapide : appelez Ketsia au <a href="tel:+262693491902"><b>06 93 49 19 02</b></a>. Sinon, ce formulaire :</p>
-    <form name="devis-hotesses" method="POST" action="https://formsubmit.co/contact@pullup.re">
-      <input type="hidden" name="_subject" value="Demande de devis hôtesses (site vitrine)">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://capdepontromain-stack.github.io/hotesses-reunion/?envoye=merci">
+    <form name="devis-hotesses" id="form-devis">
       <label for="nom">Votre nom / société</label>
       <input id="nom" name="nom" required>
       <label for="tel">Téléphone</label>
@@ -155,8 +152,22 @@ footer a{color:var(--or)}
       </select>
       <label for="msg">Votre événement (date, lieu, nombre d'hôtesses…)</label>
       <textarea id="msg" name="message" rows="4"></textarea>
-      <button class="btn" type="submit">Recevoir mon devis gratuit</button>
+      <button class="btn" type="submit">Envoyer ma demande de devis</button>
+      <p style="text-align:center;font-size:13px;color:#888;margin-top:10px">L'envoi ouvre votre messagerie avec la demande pré-remplie, adressée à contact@pullup.re.<br>Encore plus rapide : <a href="tel:+262693491902">appelez Ketsia au 06 93 49 19 02</a>.</p>
     </form>
+    <script>
+    document.getElementById('form-devis').addEventListener('submit', function(e){
+      e.preventDefault();
+      var f = this;
+      var corps = "Bonjour,%0D%0A%0D%0AJe souhaite un devis pour des hôtesses.%0D%0A%0D%0A"
+        + "Nom / société : " + encodeURIComponent(f.nom.value) + "%0D%0A"
+        + "Téléphone : " + encodeURIComponent(f.telephone.value) + "%0D%0A"
+        + "Type de mission : " + encodeURIComponent(f.type.value) + "%0D%0A"
+        + "Détails : " + encodeURIComponent(f.message.value) + "%0D%0A%0D%0A"
+        + "(Demande envoyée depuis le site vitrine hôtesses)";
+      window.location.href = "mailto:contact@pullup.re?subject=" + encodeURIComponent("Demande de devis hôtesses — " + f.nom.value) + "&body=" + corps;
+    });
+    </script>
   </div>
 </section>
 
