@@ -127,8 +127,39 @@ h1 em,h2 em,.titre em{background:linear-gradient(90deg,#c6a35a,#f4e3b2,#c6a35a);
 @keyframes dorure{to{background-position:200% center}}
 
 /* fin wow */
+
+/* ===== FINITION GRANDE MARQUE ===== */
+::selection{background:#c6a35a;color:#fff}
+h1,h2,h3{text-wrap:balance}
+p,li,figcaption{text-wrap:pretty}
+section[id]{scroll-margin-top:86px}
+:focus-visible{outline:3px solid #c6a35a;outline-offset:3px;border-radius:4px}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#0d0c0a;border-radius:8px;border:3px solid #fff}
+html{scrollbar-color:#0d0c0a transparent;scrollbar-width:thin}
+/* entrée de page : le héro se met en scène */
+@media (prefers-reduced-motion: no-preference){
+.hero .wrap>*:first-child>*{animation:entree .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:first-child>*:nth-child(2){animation-delay:.12s}
+.hero .wrap>*:first-child>*:nth-child(3){animation-delay:.24s}
+.hero .wrap>*:first-child>*:nth-child(4){animation-delay:.36s}
+.hero .wrap>*:nth-child(2){animation:entree 1s cubic-bezier(.2,.7,.2,1) .3s both}
+@keyframes entree{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+}
+.marquee:hover .defile{animation-play-state:paused}
+
+h1,h2,.titre{letter-spacing:.3px}
+.etq{letter-spacing:5px}
+figure figcaption{font-style:italic}
+.wrap p{max-width:75ch}
+.faq details{border-radius:0}
+hr,.filet{border-color:#c6a35a}
+
+/* fin finition */
 </style>
 <style id="wow-css"></style>
+<style id="polish-css"></style>
 </head>
 <body>
 
