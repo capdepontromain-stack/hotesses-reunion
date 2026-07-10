@@ -108,7 +108,27 @@ footer{background:#080706;color:#8d8571;text-align:center;padding:44px 20px;font
 footer .orn{color:var(--or);letter-spacing:8px;font-size:16px;display:block;margin-bottom:16px}
 footer a{color:var(--champ);text-decoration:none}
 img[width]{height:auto}
+
+/* ===== EFFET WOW ===== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+.topbar{position:sticky;top:0;box-shadow:0 4px 24px rgba(0,0,0,.18)}
+figure img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+figure:hover img{transform:scale(1.035)}
+.hero figure:hover img{transform:scale(1.02)}
+a.btn,.btn{position:relative;overflow:hidden}
+a.btn::after,.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .55s ease}
+a.btn:hover::after,.btn:hover::after{left:130%}
+
+.citation,.carte,figure{transition:transform .35s ease,box-shadow .35s ease}
+.citation:hover,.carte:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.25)}
+h1 em,h2 em,.titre em{background:linear-gradient(90deg,#c6a35a,#f4e3b2,#c6a35a);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:dorure 6s linear infinite}
+@keyframes dorure{to{background-position:200% center}}
+
+/* fin wow */
 </style>
+<style id="wow-css"></style>
 </head>
 <body>
 
@@ -361,6 +381,28 @@ document.getElementById('form-devis').addEventListener('submit', function(e){
 {"@type":"HowToStep","position":2,"name":"Contacter la responsable","text":"Appelez Ketsia, responsable hôtesses de Pull Up Événements, au 06 93 49 19 02, ou écrivez à contact@pullup.re."},
 {"@type":"HowToStep","position":3,"name":"Valider la proposition","text":"Recevez une proposition avec le profil des hôtesses et la tenue adaptée à votre image de marque."},
 {"@type":"HowToStep","position":4,"name":"Le jour J","text":"Les hôtesses arrivent briefées et en avance ; vous restez concentré sur vos invités."}]}
+</script>
+
+<script id="wow-js">
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sels = 'section h2, section .sub, .cadeau, .acti, .format, .point, .etape, .citation, .pilier, .carte-photo, .photo, .planche, .polaroid, .boule, .ballon, .stat, details, .carte';
+  var els = document.querySelectorAll(sels), n = 0;
+  els.forEach(function(el){
+    if (el.closest('.hero,.topbar,footer')) return;
+    el.classList.add('reveal');
+    el.style.setProperty('--d', (n % 6) * 0.08 + 's');
+    n++;
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } });
+  }, {rootMargin: '0px 0px -8% 0px', threshold: 0.08});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  document.querySelectorAll('.surligne').forEach(function(el){
+    var io2 = new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vu'); io2.unobserve(e.target);} }); }, {threshold:.4});
+    io2.observe(el);
+  });
+})();
 </script>
 </body>
 </html>
