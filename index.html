@@ -220,11 +220,17 @@ figure figcaption{transition:color .2s ease}
 
 /* fin orfevre */
 
-.k-terrain{display:flex;gap:14px;margin-top:20px}
-.k-terrain figure{margin:0;flex:1;border:1px solid var(--or);padding:6px;background:#fff}
-.k-terrain img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;filter:grayscale(30%)}
-.k-terrain figure:hover img{filter:grayscale(0)}
-.k-terrain figcaption{font-size:11px;letter-spacing:2px;text-transform:uppercase;text-align:center;padding:7px 2px 3px;color:#6f6a61}
+
+.k-metier{background:var(--noir);color:var(--ivoire);border:1px solid var(--or);padding:44px 40px;margin:46px 0 8px;display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}
+.k-metier h3{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.4vw,38px);font-weight:500;line-height:1.15;margin-bottom:14px}
+.k-metier h3 em{font-style:italic;color:var(--champ)}
+.k-metier p{font-size:15.5px;color:#d8d2c4;line-height:1.8}
+.k-metier .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.k-metier .trio figure{margin:0;background:#fff;padding:5px}
+.k-metier .trio img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;filter:grayscale(35%);transition:filter .5s}
+.k-metier .trio figure:hover img{filter:grayscale(0)}
+.k-metier .trio figcaption{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;text-align:center;padding:6px 2px 2px;color:#6f6a61}
+@media(max-width:860px){.k-metier{grid-template-columns:1fr;padding:32px 24px}}
 </style>
 <style id="wow-css"></style>
 <style id="polish-css"></style>
@@ -255,11 +261,6 @@ figure figcaption{transition:color .2s ease}
       <span class="etq" style="text-align:left">Votre interlocutrice directe</span>
       <h2>Ketsia, <em>responsable des hôtesses</em></h2>
       <p>Réservation d'une ou plusieurs hôtesses, gestion des goodies à distribuer, brief commercial de l'équipe : contactez-la directement, elle s'occupe de tout. Réponse rapide, 7 j/7 en période d'opération.</p>
-      <p style="margin-top:12px">Et Ketsia ne dirige pas depuis un bureau : elle se prête régulièrement au jeu sur le terrain — opérations séduction, remises de dotations, animations en galerie. Manager des hôtesses, c'est d'abord connaître le métier.</p>
-      <div class="k-terrain">
-        <figure><img width="1100" height="1466" src="images/hotesse-evenementielle-bouquet-roses-974.jpg" alt="Ketsia en opération séduction avec bouquet de roses en galerie à La Réunion" loading="lazy" decoding="async"><figcaption>Opération séduction</figcaption></figure>
-        <figure><img width="900" height="1200" src="images/hotesse-couronne-fleurs-remise-cadeaux-974.jpg" alt="Ketsia remettant des dotations lors d'une animation en galerie à La Réunion" loading="lazy" decoding="async"><figcaption>Remise de dotations</figcaption></figure>
-      </div>
       <a class="tel-or" href="tel:+262693491902">06 93 49 19 02</a>
     </div>
   </div>
@@ -313,16 +314,27 @@ figure figcaption{transition:color .2s ease}
       <figure class="oeuvre"><div class="ph"><img width="352" height="560" src="images/hotes-service-plateaux-cocktail-reunion.jpg" alt="Hôtes en tenue noire avec plateaux lors d'un cocktail d'entreprise à La Réunion" loading="lazy"></div><figcaption>Service cocktail</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="426" height="468" src="images/hotesse-tailleur-accueil-photobooth-974.jpg" alt="Hôtesse d'accueil en tailleur devant une animation photobooth à La Réunion" loading="lazy"></div><figcaption>Accueil en tailleur</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="550" height="836" src="images/preparation-maquillage-hotesse-backstage.jpg" alt="Préparation maquillage d'une hôtesse en coulisses avant un événement à La Réunion" loading="lazy"></div><figcaption>En coulisses</figcaption></figure>
-      <figure class="oeuvre"><div class="ph"><img width="900" height="1600" src="images/hotesse-festival-animation-galerie-reunion.jpg" alt="Hôtesse lors d'un festival d'animation en galerie marchande à La Réunion" loading="lazy"></div><figcaption>Festival en galerie</figcaption></figure>
-      <figure class="oeuvre"><div class="ph"><img width="900" height="670" src="images/hotesse-robe-rose-evenement-galerie-reunion.jpg" alt="Hôtesse en robe rose lors d'un événement en galerie marchande 974" loading="lazy"></div><figcaption>Tenue à thème</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1200" src="images/hotesse-animation-borne-jeu-galerie-reunion.jpg" alt="Hôtesse animant un jeu en galerie marchande à La Réunion" loading="lazy"></div><figcaption>Animation de borne</figcaption></figure>
+    </div>
+    <div class="k-metier">
+      <div>
+        <span class="etq" style="text-align:left">La cheffe sur le terrain</span>
+        <h3>Manager des hôtesses, c'est aussi <em>connaître le métier</em></h3>
+        <p>Ketsia, votre cheffe hôtesse, ne se contente pas de composer les équipes et de mener les briefs : elle est souvent elle-même l'hôtesse de nos événements — animations en galerie, opérations à thème, remises de dotations. C'est cette pratique du terrain qui lui permet de choisir le bon profil pour votre mission, de briefer juste, et d'exiger de ses équipes ce qu'elle s'applique d'abord à elle-même.</p>
+      </div>
+      <div class="trio">
+        <figure><img src="images/hotesse-festival-animation-galerie-reunion.jpg" alt="Hôtesse lors d'un festival d'animation en galerie marchande à La Réunion" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Festival en galerie</figcaption></figure>
+        <figure><img src="images/hotesse-robe-rose-evenement-galerie-reunion.jpg" alt="Hôtesse en robe rose lors d'un événement en galerie marchande 974" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Tenue à thème</figcaption></figure>
+        <figure><img src="images/hotesse-offre-rose-cliente-fete-meres-974.jpg" alt="Hôtesse offrant une rose à une cliente pour la fête des mères à La Réunion" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Le geste qui touche</figcaption></figure>
+      </div>
+    </div>
+    <div class="galerie" style="margin-top:34px">
       <figure class="oeuvre"><div class="ph"><img width="900" height="1192" src="images/hotesse-stand-degustation-produits-974.jpg" alt="Hôtesse sur un stand de dégustation de produits locaux à La Réunion" loading="lazy"></div><figcaption>Dégustation péi</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="1200" height="900" src="images/hotesse-jeu-coffre-fort-animation-974.jpg" alt="Hôtesse animant un jeu du coffre-fort en centre commercial à La Réunion" loading="lazy"></div><figcaption>Jeu du coffre-fort</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="1200" height="900" src="images/animation-coffre-fort-gagnant-galerie-reunion.jpg" alt="Gagnant d'un jeu coffre-fort avec l'hôtesse en galerie marchande à La Réunion" loading="lazy"></div><figcaption>Et le coffre s'ouvre</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1258" src="images/hotesse-robe-longue-animation-commerciale-974.jpg" alt="Hôtesse en robe longue lors d'une animation commerciale à La Réunion" loading="lazy"></div><figcaption>Élégance créole</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1190" src="images/hotesse-club-enfants-ours-geant-reunion.jpg" alt="Hôtesse du club enfants avec un ours géant lors d'une animation à La Réunion" loading="lazy"></div><figcaption>Club enfants</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1200" src="images/hotesse-distribution-flyers-galerie-reunion.jpg" alt="Hôtesse distribuant des flyers devant une vitrine en galerie à La Réunion" loading="lazy"></div><figcaption>Distribution ciblée</figcaption></figure>
-      <figure class="oeuvre"><div class="ph"><img width="900" height="1200" src="images/hotesse-offre-rose-cliente-fete-meres-974.jpg" alt="Hôtesse offrant une rose à une cliente pour la fête des mères à La Réunion" loading="lazy"></div><figcaption>Le geste qui touche</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="540" height="460" src="images/hotesse-conseil-cliente-animation-reunion.jpg" alt="Hôtesse conseillant une cliente lors d'une animation à La Réunion" loading="lazy"></div><figcaption>Écoute &amp; conseil</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="1200" height="900" src="images/hotesses-tee-shirts-marque-operation-reunion.jpg" alt="Hôtesses en tee-shirts aux couleurs d'une marque lors d'une opération à La Réunion" loading="lazy"></div><figcaption>Vos couleurs portées</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1200" src="images/equipe-animation-hotesses-pull-up-974.jpg" alt="Équipe d'animation et hôtesses Pull Up Événements à La Réunion" loading="lazy"></div><figcaption>Le combo Pull Up</figcaption></figure>
