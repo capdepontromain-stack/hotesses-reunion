@@ -434,6 +434,8 @@ figure figcaption{transition:color .2s ease}
       <input id="nom" name="nom" required>
       <label for="tel">Téléphone</label>
       <input id="tel" name="telephone" type="tel" required>
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" autocomplete="email" required placeholder="Pour recevoir votre devis">
       <label for="type">Type de mission</label>
       <select id="type" name="type">
         <option>Hôtesse d'accueil</option>
@@ -444,8 +446,9 @@ figure figcaption{transition:color .2s ease}
       </select>
       <label for="msg">Votre événement (date, lieu, nombre d'hôtesses…)</label>
       <textarea id="msg" name="message" rows="4"></textarea>
-      <button class="btn plein" type="submit">Envoyer ma demande</button>
-      <p class="mini">L'envoi ouvre votre messagerie avec la demande pré-remplie, adressée à contact@pullup.re.<br>Encore plus rapide : <a href="tel:+262693491902">appelez Ketsia au 06 93 49 19 02</a>.</p>
+      <button class="btn plein" type="submit" id="btn-devis">Envoyer ma demande</button>
+      <p id="devis-etat" role="status" aria-live="polite"></p>
+      <p class="mini">Votre demande nous arrive directement, réponse sous 48 h.<br>Encore plus rapide : <a href="tel:+262693491902">appelez Ketsia au 06 93 49 19 02</a>.</p>
     </form>
     </div>
   </div>
@@ -471,17 +474,141 @@ figure figcaption{transition:color .2s ease}
 </footer>
 
 <script>
-document.getElementById('form-devis').addEventListener('submit', function(e){
-  e.preventDefault();
-  var f = this;
-  var corps = "Bonjour,%0D%0A%0D%0AJe souhaite un devis pour des hôtesses.%0D%0A%0D%0A"
-    + "Nom / société : " + encodeURIComponent(f.nom.value) + "%0D%0A"
-    + "Téléphone : " + encodeURIComponent(f.telephone.value) + "%0D%0A"
-    + "Type de mission : " + encodeURIComponent(f.type.value) + "%0D%0A"
-    + "Détails : " + encodeURIComponent(f.message.value) + "%0D%0A%0D%0A"
-    + "(Demande envoyée depuis le site vitrine hôtesses)";
-  window.location.href = "mailto:contact@pullup.re?subject=" + encodeURIComponent("Demande de devis hôtesses — " + f.nom.value) + "&body=" + corps;
+/* ═══════════════════════════════════════════════════════════════
+   SUIVI — Google Analytics 4 + conversions Google Ads
+   Remplir les 3 valeurs ci-dessous et le suivi démarre tout seul.
+   Tant qu'elles sont vides, rien n'est chargé (aucun cookie posé).
+   GA4       : Analytics > Admin > Flux de données  →  "G-XXXXXXXXXX"
+   ADS       : Google Ads > Objectifs > Conversions > Balise Google
+   ADS_DEVIS : même page, colonne "Étiquette de conversion"
+   ═══════════════════════════════════════════════════════════════ */
+var SUIVI = {
+  GA4:       "",
+  ADS:       "",
+  ADS_DEVIS: ""
+};
+
+(function(){
+  var ids = [SUIVI.GA4, SUIVI.ADS].filter(Boolean);
+  if (!ids.length) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date());
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+  document.head.appendChild(s);
+  ids.forEach(function(id){ gtag('config', id); });
+})();
+
+function pisterEvenement(nom, params){
+  if (typeof gtag !== 'function') return;
+  gtag('event', nom, params || {});
+}
+
+function pisterConversionDevis(){
+  pisterEvenement('demande_devis', { source: 'hotesse-reunion' });
+  if (typeof gtag === 'function' && SUIVI.ADS_DEVIS) {
+    gtag('event', 'conversion', { send_to: SUIVI.ADS_DEVIS });
+  }
+}
+
+document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+  a.addEventListener('click', function(){
+    pisterEvenement('clic_telephone', { source: 'hotesse-reunion' });
+  });
 });
+
+/* ═══════════════════════════════════════════════════════════════
+   FORMULAIRE DE DEVIS — envoi direct vers contact@pullup.re
+   (relais FormSubmit). Si le réseau échoue, on bascule sur la
+   messagerie du visiteur pour ne perdre aucune demande.
+   ═══════════════════════════════════════════════════════════════ */
+(function(){
+  var f    = document.getElementById('form-devis');
+  var btn  = document.getElementById('btn-devis');
+  var etat = document.getElementById('devis-etat');
+  if (!f) return;
+
+  function message(texte, couleur){
+    etat.textContent = texte;
+    etat.style.cssText = 'text-align:center;font-size:14.5px;font-weight:700;margin-top:14px;color:' + couleur;
+  }
+
+  function champs(){
+    return {
+      "Nom / société":   f.nom.value,
+      "Téléphone":       f.telephone.value,
+      "E-mail":          f.email.value,
+      "Type de mission": f.type.value,
+      "L'événement":     f.message.value || "—"
+    };
+  }
+
+  function secoursMessagerie(){
+    var d = champs(), corps = "Bonjour,\r\n\r\nJe souhaite un devis pour des hôtesses.\r\n\r\n";
+    for (var k in d) corps += k + " : " + d[k] + "\r\n";
+    corps += "\r\n(Demande envoyée depuis hotesse-reunion.re)";
+    window.location.href = "mailto:contact@pullup.re?subject="
+      + encodeURIComponent("Demande de devis hôtesses — " + f.nom.value)
+      + "&body=" + encodeURIComponent(corps);
+  }
+
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    btn.disabled = true;
+    var libelle = btn.textContent;
+    btn.textContent = "Envoi en cours…";
+    message("", "#666");
+
+    var donnees = champs();
+    donnees._subject  = "💁 Devis hôtesses — " + f.nom.value;
+    donnees._template = "table";
+    donnees._captcha  = "false";
+    donnees["Reçu depuis"] = "hotesse-reunion.re";
+
+    /* Deux canaux essayés dans l'ordre. Le premier est la clé anonyme
+       FormSubmit : elle évite d'écrire contact@pullup.re en clair dans
+       la page (à l'abri des robots à spam). Le second sert de secours. */
+    var CANAUX = [
+      'https://formsubmit.co/ajax/a25833b0726786def63fa51e651d059a',
+      'https://formsubmit.co/ajax/contact@pullup.re'
+    ];
+
+    function envoyer(i){
+      if (i >= CANAUX.length) return Promise.reject(new Error('aucun canal disponible'));
+      return fetch(CANAUX[i], {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(donnees)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(rep){
+        /* FormSubmit répond 200 même en cas de refus : on lit le champ success */
+        if (rep && String(rep.success) === 'true') return rep;
+        throw new Error(rep && rep.message ? rep.message : 'envoi refusé');
+      })
+      .catch(function(err){
+        if (i + 1 < CANAUX.length) return envoyer(i + 1);
+        throw err;
+      });
+    }
+
+    envoyer(0)
+    .then(function(){
+      f.reset();
+      btn.textContent = "Demande envoyée ✓";
+      message("Merci ! Votre demande est bien arrivée. Ketsia revient vers vous sous 48 h — pour aller plus vite, appelez le 06 93 49 19 02.", "#1c1c1c");
+      pisterConversionDevis();
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = libelle;
+      message("L'envoi automatique n'a pas fonctionné — nous ouvrons votre messagerie avec la demande pré-remplie. Ou appelez le 06 93 49 19 02.", "#c0392b");
+      secoursMessagerie();
+    });
+  });
+})();
 </script>
 
 <script type="application/ld+json">
