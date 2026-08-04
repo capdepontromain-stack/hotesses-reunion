@@ -244,6 +244,24 @@ figure figcaption{transition:color .2s ease}
 <style id="polish-css"></style>
 </head>
 <body>
+<!-- pu-trust : bandeau de confiance Pull Up — chiffre géré par avis-et-confiance.js -->
+<style>
+.pu-trust{background:#0d0f12;color:#e9e3d5;font:600 13px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:8px 16px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;z-index:60;letter-spacing:.2px}
+.pu-trust a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.pu-trust a:hover{color:#fff}
+.pu-trust .pu-et{color:#e8b53c;letter-spacing:2px;font-size:12px}
+.pu-trust b{color:#fff;font-weight:800}
+.pu-trust .pu-sep{opacity:.3}
+@media(max-width:760px){.pu-trust{font-size:12px;gap:10px;padding:7px 8px;white-space:nowrap}.pu-trust .pu-opt{display:none}.pu-trust .pu-et{font-size:10.5px;letter-spacing:1px}}
+</style>
+<div class="pu-trust">
+<a href="https://g.page/r/CYZGysYZgL8iEBM" target="_blank" rel="noopener" title="Voir les avis Google de Pull Up Événements"><span class="pu-et">★★★★★</span> <b>4,9/5</b><span class="pu-opt"> sur Google</span> — <b class="pu-nb-avis">31 avis</b></a>
+<span class="pu-sep pu-opt">·</span>
+<span class="pu-opt">Devis gratuit</span>
+<span class="pu-sep">·</span>
+<a href="tel:+262693491902"><b>📞 06 93 49 19 02</b></a>
+</div>
+<!-- /pu-trust -->
 
 <div style="background:var(--noir);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;position:relative;z-index:5">
   <a href="/" style="font-family:'Cormorant Garamond',serif;color:var(--ivoire);font-size:20px;text-decoration:none;letter-spacing:1px">Hôtesses <em style="color:var(--champ)">Réunion</em></a>
@@ -259,8 +277,32 @@ figure figcaption{transition:color .2s ease}
   <a class="btn plein" href="tel:+262693491902">☎ 06 93 49 19 02</a>&nbsp;&nbsp;
   <a class="btn" href="#devis">Devis en 48 h</a>&nbsp;&nbsp;
   <a class="btn" href="/blog/">Le blog</a>
-  <div class="note">★★★★★ &nbsp;4,9/5 sur Google — plus de 30 avis · agence Pull Up Événements</div>
+  <div class="note">★★★★★ &nbsp;4,9/5 sur Google — 31 avis · agence Pull Up Événements</div>
 </header>
+<!-- pu-clients : bande références clients Pull Up -->
+<style>
+.pu-clients{background:#0d0f12;padding:34px 20px;border-top:1px solid rgba(232,181,60,.28);border-bottom:1px solid rgba(232,181,60,.28)}
+.pu-cl-in{max-width:1060px;margin:0 auto;text-align:center}
+.pu-cl-t{margin:0 0 4px;font:800 11px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:3.2px;text-transform:uppercase;color:#e8b53c}
+.pu-cl-st{margin:0 0 20px;font:400 14px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#8d959c}
+.pu-cl-l{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px}
+.pu-cl-l li{font:700 14.5px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.4px;color:#e9e3d5;padding:9px 15px;border:1px solid rgba(233,227,213,.2);border-radius:999px;white-space:nowrap;transition:border-color .25s,color .25s}
+.pu-cl-l li:hover{border-color:rgba(232,181,60,.75);color:#fff}
+.pu-cl-p{margin:20px 0 0;font:400 13.5px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#8d959c}
+.pu-cl-p a{color:#e8b53c;text-decoration:none;border-bottom:1px solid rgba(232,181,60,.4)}
+.pu-cl-p a:hover{color:#fff;border-color:#fff}
+@media(max-width:640px){.pu-clients{padding:26px 14px}.pu-cl-l{gap:8px}.pu-cl-l li{font-size:13px;padding:7px 12px}}
+</style>
+<section class="pu-clients" aria-label="Ils nous font confiance">
+<div class="pu-cl-in">
+<p class="pu-cl-t">Ils nous font confiance</p>
+<p class="pu-cl-st">Des entreprises, des institutions et des CSE de toute La Réunion.</p>
+<ul class="pu-cl-l"><li>Crédit Agricole</li><li>Crédit Moderne</li><li>INSEE</li><li>SAPMER</li><li>CILAM</li><li>Mercialys</li><li>Sudeco</li><li>Ravate Pro</li><li>Croix-Rouge française</li><li>Fondation Père Favron</li><li>Groupe Caillé</li><li>Testoni</li></ul>
+<p class="pu-cl-p">…et des dizaines de comités d'entreprise partout sur l'île. <a href="https://pullup.re/ils-nous-font-confiance/">Voir nos références →</a></p>
+</div>
+</section>
+<!-- /pu-clients -->
+
 
 <div class="ketsia">
   <div class="wrap duo">
@@ -367,7 +409,7 @@ figure figcaption{transition:color .2s ease}
     <p style="color:#3a352c;margin-bottom:14px">Robes de soirée ou tailleurs, contrôle discret des invitations, placement en salle, service en plateau, accompagnement des personnalités : pour vos événements haut de gamme, nos hôtes et hôtesses incarnent le niveau d'exigence de votre entreprise. En coulisses, tout est préparé — jusqu'au maquillage professionnel avant l'ouverture des portes.</p>
     <h3 style="font-size:24px;margin:36px 0 8px">📍 Des hôtesses dans toute La Réunion</h3>
     <p style="color:#3a352c;margin-bottom:14px">Notre réseau d'hôtesses est réparti sur toute l'île : <strong>hôtesses à Saint-Denis</strong> et dans le Nord pour vos congrès et séminaires, <strong>hôtesses à Saint-Pierre</strong> et dans le Sud pour vos salons et animations, équipes dans l'Ouest (Saint-Paul, Saint-Gilles, Le Port) pour les centres commerciaux et les soirées en bord de mer. Cette proximité limite les frais de déplacement et permet de mobiliser une équipe rapidement, même en urgence.</p>
-    <p style="color:#3a352c">Notre sérieux se lit dans nos <a href="https://g.page/r/CYZGysYZgL8iEBM" target="_blank" rel="noopener">avis Google publics : 4,9/5 sur plus de 30 avis</a> d'entreprises réunionnaises — la meilleure garantie avant de nous confier votre image.</p>
+    <p style="color:#3a352c">Notre sérieux se lit dans nos <a href="https://g.page/r/CYZGysYZgL8iEBM" target="_blank" rel="noopener">avis Google publics : 4,9/5 sur 31 avis</a> d'entreprises réunionnaises — la meilleure garantie avant de nous confier votre image.</p>
   </div>
 </section>
 
@@ -393,7 +435,7 @@ figure figcaption{transition:color .2s ease}
     <div class="citations">
       <p style="max-width:760px;margin:0 auto 26px;color:#a99e86;font-size:15.5px;line-height:1.75">Deux avis choisis parce qu'ils parlent de ce qui compte pour une mission d'accueil : la rigueur de l'organisation et l'attitude de l'équipe sur le terrain. Publiés tels quels sur notre fiche Google.</p><figure class="citation"><div class="etoiles" aria-label="5 sur 5">★★★★★</div><blockquote><p>Une expérience inoubliable grâce à Pull Up Événements ! Professionnalisme, créativité et bonne humeur sont au rendez-vous. L'équipe a su parfaitement comprendre nos attentes et les surpasser. L'organisation était fluide, les animations originales, et l'ambiance tout simplement incroyable. Merci pour ce moment unique — je recommande à 100 % pour tous vos événements, qu'ils soient privés ou professionnels !</p></blockquote><figcaption class="auteur">Claire Domen <span>Avis Google · 5/5</span></figcaption></figure><figure class="citation"><div class="etoiles" aria-label="5 sur 5">★★★★★</div><blockquote><p>Ambiance au top 👍👍 Équipe super sympa 👏👏</p></blockquote><figcaption class="auteur">Alexandra Begue <span>Avis Google · 5/5</span></figcaption></figure>
     </div>
-    <p style="color:#c9c1af;margin:14px auto 28px;max-width:560px">Plus de 30 entreprises réunionnaises ont noté nos prestations. Votre avis compte — et fait vivre nos équipes.</p>
+    <p style="color:#c9c1af;margin:14px auto 28px;max-width:560px">31 entreprises réunionnaises ont noté nos prestations. Votre avis compte — et fait vivre nos équipes.</p>
     <a class="btn plein" href="https://g.page/r/CYZGysYZgL8iEBM/review" target="_blank" rel="noopener">Donnez votre avis</a>&nbsp;&nbsp;
     <a class="btn" href="https://g.page/r/CYZGysYZgL8iEBM" target="_blank" rel="noopener">Voir notre fiche Google</a>
   </div>
@@ -413,7 +455,7 @@ figure figcaption{transition:color .2s ease}
     <h2 class="titre">Avant de <em>réserver</em></h2>
     <div class="faq">
       <details><summary>Quelle agence événementielle réunionnaise choisir pour son accueil ?</summary><p>Posez la question autrement : à qui les organisations les plus exigeantes de l'île confient-elles leur image ? L'INSEE, le Crédit Agricole, Crédit Moderne, Ravate Pro, Testoni, la Croix-Rouge, la Fondation Père Favron — et trois grandes galeries commerciales (Casabona, Cap Sacré-Cœur, Duparc) dont Pull Up Événements est le référent accueil et animations depuis des années. Neuf ans de métier, 4,9/5 d'avis publics : c'est notre réponse. Le détail est dans <a href="/blog/agence-hotesses-references-reunion/">« Pourquoi les grandes enseignes nous confient leur accueil »</a>.</p></details>
-      <details><summary>Qui fournit des hôtesses événementielles à La Réunion ?</summary><p>Pull Up Événements, agence événementielle basée au Tampon et notée 4,9/5 sur Google (plus de 30 avis), fournit des hôtesses et hôtes d'accueil professionnels partout à La Réunion via son service dédié Hôtesses Réunion — le spécialiste de l'accueil événementiel : accueil VIP, salons, congrès, soirées d'entreprise, animations commerciales et inaugurations. Réservation directe auprès de Ketsia, responsable hôtesses : 06 93 49 19 02.</p></details>
+      <details><summary>Qui fournit des hôtesses événementielles à La Réunion ?</summary><p>Pull Up Événements, agence événementielle basée au Tampon et notée 4,9/5 sur Google (31 avis), fournit des hôtesses et hôtes d'accueil professionnels partout à La Réunion via son service dédié Hôtesses Réunion — le spécialiste de l'accueil événementiel : accueil VIP, salons, congrès, soirées d'entreprise, animations commerciales et inaugurations. Réservation directe auprès de Ketsia, responsable hôtesses : 06 93 49 19 02.</p></details>
     <details><summary>Comment réserver une hôtesse à La Réunion ?</summary><p>Quatre étapes : 1) définissez votre besoin (date, lieu, horaires, nombre d'hôtesses, mission d'accueil ou commerciale) ; 2) appelez Ketsia au 06 93 49 19 02 ou écrivez à contact@pullup.re ; 3) recevez une proposition avec le profil des hôtesses et la tenue adaptée à votre image ; 4) le jour J, les hôtesses arrivent briefées et en avance. Le plus simple : un appel, et tout est calé en quelques minutes.</p></details>
     <details><summary>Combien coûte une hôtesse événementielle à La Réunion ?</summary><p>Le tarif varie selon la durée, le type de mission (accueil simple, commerciale, bilingue), le nombre d'hôtesses et le lieu. Envoyez-nous les détails de votre événement : vous recevez un devis gratuit et personnalisé sous 48 heures, sans engagement.</p></details>
       <details><summary>Peut-on réserver une hôtesse pour quelques heures seulement ?</summary><p>Oui : de quelques heures (inauguration, visite d'accueil) à plusieurs semaines (opération commerciale en centre commercial). Les tarifs sont dégressifs sur la durée.</p></details>
