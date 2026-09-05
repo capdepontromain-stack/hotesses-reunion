@@ -524,6 +524,9 @@ figure figcaption{transition:color .2s ease}
     <p class="sub">Le plus rapide : appelez Ketsia au <a href="tel:+262693491902" style="color:var(--champ)">06 93 49 19 02</a>. Sinon, ce formulaire :</p>
     <div class="boite">
     <form name="devis-hotesses" id="form-devis">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+      <input type="hidden" name="source_page" value="">
+      <input type="hidden" name="site" value="hotesse-reunion.re">
       <label for="nom">Votre nom / société</label>
       <input id="nom" name="nom" required>
       <label for="tel">Téléphone</label>
@@ -538,8 +541,14 @@ figure figcaption{transition:color .2s ease}
         <option>Soirée d'entreprise / gala</option>
         <option>Autre</option>
       </select>
-      <label for="msg">Votre événement (date, lieu, nombre d'hôtesses…)</label>
-      <textarea id="msg" name="message" rows="4"></textarea>
+      <label for="effectif">Nombre d'hôtesses</label>
+      <input id="effectif" name="effectif" type="number" min="1" inputmode="numeric" placeholder="Ex : 2">
+      <label for="date">Date de l'événement</label>
+      <input id="date" name="date" placeholder="Ex : 12/10/2026 ou « à définir »">
+      <label for="budget">Budget indicatif</label>
+      <input id="budget" name="budget" placeholder="Votre enveloppe approximative (facultatif)">
+      <label for="msg">Votre événement en quelques mots</label>
+      <textarea id="msg" name="message" rows="4" placeholder="Lieu, contexte, mission des hôtesses…"></textarea>
       <button class="btn plein" type="submit" id="btn-devis">Envoyer ma demande</button>
       <p id="devis-etat" role="status" aria-live="polite"></p>
       <p class="mini">Votre demande nous arrive directement, réponse sous 24 h.<br>Encore plus rapide : <a href="tel:+262693491902">appelez Ketsia au 06 93 49 19 02</a>.</p>
@@ -658,15 +667,14 @@ function pisterEvenement(nom, params){
 }
 
 function pisterConversionDevis(){
-  pisterEvenement('demande_devis', { source: 'hotesse-reunion' });
+  if (!window.__puDevisEnvoye) { window.__puDevisEnvoye = true; pisterEvenement('devis_envoye', { site: 'hotesse-reunion', prestation: (function(){ try { var el = document.querySelector('#form-devis [name=\"type\"]'); return el ? el.value : ''; } catch (err) { return ''; } })(), source_page: location.pathname }); }
   if (typeof gtag === 'function' && SUIVI.ADS_DEVIS) {
     gtag('event', 'conversion', { send_to: SUIVI.ADS_DEVIS });
   }
 }
 
 document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
-  a.addEventListener('click', function(){
-    pisterEvenement('clic_telephone', { source: 'hotesse-reunion' });
+  a.addEventListener('click', function(ev){ if (ev && ev.__puAppel) return; if (ev) ev.__puAppel = true; pisterEvenement('appel_clic', { site: 'hotesse-reunion', page: location.pathname });
   });
 });
 
@@ -679,7 +687,7 @@ document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
   var f    = document.getElementById('form-devis');
   var btn  = document.getElementById('btn-devis');
   var etat = document.getElementById('devis-etat');
-  if (!f) return;
+  if (!f) return; try { if (f.source_page) f.source_page.value = location.pathname; } catch (err) {}
 
   function message(texte, couleur){
     etat.textContent = texte;
@@ -692,6 +700,9 @@ document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
       "Téléphone":       f.telephone.value,
       "E-mail":          f.email.value,
       "Type de mission": f.type.value,
+      "Nombre d'hôtesses": f.effectif.value || "non précisé",
+      "Date de l'événement": f.date.value || "non précisée",
+      "Budget indicatif": f.budget.value || "non précisé",
       "L'événement":     f.message.value || "—"
     };
   }
@@ -706,7 +717,7 @@ document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
   }
 
   f.addEventListener('submit', function(e){
-    e.preventDefault();
+    e.preventDefault(); if (f.botcheck && f.botcheck.checked) { f.reset(); return; }
     btn.disabled = true;
     var libelle = btn.textContent;
     btn.textContent = "Envoi en cours…";
@@ -716,7 +727,7 @@ document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
     donnees._subject  = "💁 Devis hôtesses — " + f.nom.value;
     donnees._template = "table";
     donnees._captcha  = "false";
-    donnees["Reçu depuis"] = "hotesse-reunion.re";
+    donnees["Reçu depuis"] = "hotesse-reunion.re"; donnees.source_page = (f.source_page && f.source_page.value) || location.pathname; donnees.site = "hotesse-reunion.re"; donnees.botcheck = false;
 
     /* Canaux essayés dans l'ordre jusqu'à ce que l'un aboutisse :
        1. le relais de pullup.re, qui remet la demande à contact@pullup.re ;
@@ -789,14 +800,14 @@ document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
     .then(function(){
       f.reset();
       btn.textContent = "Demande envoyée ✓";
-      message("Merci ! Votre demande est bien arrivée. Ketsia revient vers vous sous 24 h — pour aller plus vite, appelez le 06 93 49 19 02.", "#1c1c1c");
+      message("Merci ! Votre demande est bien arrivée. Ketsia revient vers vous sous 24 h. Pour aller plus vite, appelez le 06 93 49 19 02.", "#1c1c1c");
       pisterConversionDevis();
       if (window.puEtincelles) window.puEtincelles(btn);
     })
     .catch(function(){
       btn.disabled = false;
       btn.textContent = libelle;
-      message("L'envoi automatique n'a pas fonctionné — nous ouvrons votre messagerie avec la demande pré-remplie. Ou appelez le 06 93 49 19 02.", "#c0392b");
+      message("L'envoi automatique n'a pas fonctionné : nous ouvrons votre messagerie avec la demande pré-remplie. Ou appelez le 06 93 49 19 02.", "#c0392b");
       secoursMessagerie();
     });
   });
