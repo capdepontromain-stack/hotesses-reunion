@@ -26,6 +26,10 @@ Mise à disposition d'hôtesses et hôtes d'accueil professionnels partout à La
 Crédit Moderne, Crédit Agricole, Ravate Pro, l'INSEE, Testoni, la Croix-Rouge, la Fondation Père Favron. Référent animations des galeries commerciales Casabona (Saint-Pierre), Cap Sacré-Cœur (Le Port) et Duparc (Sainte-Marie). Marque créée en 2017, société depuis 2022.
 
 
+## Pages principales du site
+
+- https://hotesse-reunion.re/demarche-rse/ : notre démarche RSE (missions d'accueil responsables, recrutement local)
+
 ## Hôtesses par commune
 Une page dédiée par commune, avec les lieux du secteur, l'accès et les contraintes locales :
 - Hôtesses événementielles à Saint-Denis (97400) : https://hotesse-reunion.re/hotesses-saint-denis/
