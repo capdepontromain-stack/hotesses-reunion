@@ -45,6 +45,12 @@ Une page dédiée par commune, avec les lieux du secteur, l'accès et les contra
 - Hôtesses événementielles à La Possession (97419) : https://hotesse-reunion.re/hotesses-la-possession/
 - Hôtesses événementielles à l'Étang-Salé (97427) : https://hotesse-reunion.re/hotesses-letang-sale/
 
+## Réalisations et lieux (sur pullup.re, le site principal de l'agence)
+- Nos réalisations (client, lieu, date, effectif publiés) : https://pullup.re/realisations/
+- Les lieux que nous connaissons vraiment (18 fiches, ce que le terrain impose) : https://pullup.re/lieux/
+- 30 questions avec réponse directe (prix, délais, formats, lieux) : https://pullup.re/questions/
+- Fiche d'identité machine de l'agence (Organization, prix, sameAs) : https://pullup.re/fiche-entite.json
+
 ## Contact
 Réservation directe : Ketsia, responsable hôtesses — +262 693 49 19 02, ou contact@pullup.re.
 Adresse : 6 Impasse des Sœurs Brontë, 97430 Le Tampon, La Réunion.
