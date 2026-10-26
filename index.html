@@ -16,7 +16,8 @@
 <meta name="theme-color" content="#0d0c0a">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<link rel="preload" as="image" fetchpriority="high" href="images/equipe-hotesses-operation-commerciale-974.jpg">
+<link rel="preload" as="image" fetchpriority="high" href="images/hero-hotesses-operation-commerciale-mobile.webp" media="(max-width:768px)">
+<link rel="preload" as="image" fetchpriority="high" href="images/hero-hotesses-operation-commerciale.webp" media="(min-width:769px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
@@ -35,7 +36,7 @@ a{color:var(--or)}
 .btn.plein{background:var(--or);color:var(--noir)}
 .btn.plein:hover{background:var(--champ)}
 /* ===== HERO ===== */
-.hero{background:linear-gradient(rgba(13,12,10,.72),rgba(13,12,10,.88)),url('images/equipe-hotesses-operation-commerciale-974.jpg') center 25%/cover no-repeat;color:var(--ivoire);text-align:center;padding:110px 24px 120px;position:relative}
+.hero{background:#0d0c0a;color:var(--ivoire);text-align:center;padding:110px 24px 120px;position:relative;overflow:hidden}.hero .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;z-index:0}.hero .hero-voile{position:absolute;inset:0;background:linear-gradient(rgba(13,12,10,.72),rgba(13,12,10,.88));z-index:0}.hero>*:not(picture):not(.hero-voile){position:relative;z-index:2}
 .hero .orn{color:var(--or);font-size:22px;letter-spacing:8px}
 .hero h1{font-size:clamp(40px,6.5vw,76px);line-height:1.08;margin:22px auto 10px;max-width:880px;font-weight:500}
 .hero h1 em{font-style:italic;color:var(--champ)}
@@ -274,13 +275,14 @@ footer a{text-decoration:underline}
 </div>
 <!-- /pu-trust -->
 
-<div style="background:var(--noir);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;position:relative;z-index:5">
+<header style="background:var(--noir);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;position:relative;z-index:5">
   <a href="/" style="font-family:'Cormorant Garamond',serif;color:var(--ivoire);font-size:20px;text-decoration:none;letter-spacing:1px">Hôtesses <em style="color:var(--champ)">Réunion</em></a>
   <nav><a href="/" style="color:var(--champ);text-decoration:none;letter-spacing:2px;font-size:12.5px;text-transform:uppercase;margin-left:22px">Accueil</a><a href="/blog/" style="color:var(--champ);text-decoration:none;letter-spacing:2px;font-size:12.5px;text-transform:uppercase;margin-left:22px">Le blog</a><a href="tel:+262693491902" style="color:var(--ivoire);text-decoration:none;letter-spacing:2px;font-size:12.5px;margin-left:22px">☎ 06 93 49 19 02</a></nav>
-</div>
+</header>
 
 <main>
 <header class="hero">
+  <picture><source media="(max-width:768px)" srcset="images/hero-hotesses-operation-commerciale-mobile.webp"><img class="hero-img" src="images/hero-hotesses-operation-commerciale.webp" width="1100" height="826" alt="Équipe d'hôtesses Pull Up Événements sur une opération commerciale à La Réunion" fetchpriority="high" decoding="async"></picture><div class="hero-voile" aria-hidden="true"></div>
   <div class="orn">✦ ✦ ✦</div>
   <span class="etq" style="margin-top:20px">Réservation directe — partout à La Réunion</span>
   <h1>Hôtesses événementielles<br><em>d'exception</em> à La Réunion</h1>
@@ -411,7 +413,7 @@ footer a{text-decoration:underline}
     <h2 class="titre">Nos hôtesses <em>en mission</em></h2>
     <p class="sub">Pas de photos de banque d'images : uniquement nos équipes sur de vraies opérations à La Réunion. Survolez pour révéler les couleurs.</p>
     <div class="galerie">
-      <figure class="oeuvre"><div class="ph"><img width="1400" height="1067" src="images/hotesse-open-des-brisants-2025-beach-tennis-reunion.webp" alt="Hôtesse Pull Up Événements dans les tribunes de l'Open International des Brisants 2025, tournoi de beach tennis à Saint-Gilles La Réunion" loading="lazy"></div><figcaption>Open des Brisants 2025</figcaption></figure>
+      <figure class="oeuvre"><div class="ph"><img width="1000" height="763" src="images/hotesse-open-des-brisants-2025-beach-tennis-reunion-leger.webp" alt="Hôtesse Pull Up Événements dans les tribunes de l'Open International des Brisants 2025, tournoi de beach tennis à Saint-Gilles La Réunion" loading="lazy"></div><figcaption>Open des Brisants 2025</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="1400" height="1070" src="images/hotesse-20-ans-australine-open-des-brisants-reunion.webp" alt="Hôtesse Pull Up en t-shirt et casquette des 20 ans d'Australine sur la plage des Brisants à Saint-Gilles La Réunion" loading="lazy"></div><figcaption>Les 20 ans d'Australine</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1200" src="images/hotesse-accueil-clients-jeu-concours-reunion-v2.jpg" alt="Hôtesse d'accueil avec des clients lors d'un jeu concours à La Réunion" loading="lazy"></div><figcaption>Jeu concours en galerie</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1200" src="images/hotesse-goodies-animation-commerciale-974-v2.jpg" alt="Hôtesse distribuant des goodies lors d'une animation commerciale 974" loading="lazy"></div><figcaption>Distribution de goodies</figcaption></figure>
@@ -431,7 +433,7 @@ footer a{text-decoration:underline}
         <p>Ketsia, votre cheffe hôtesse, ne se contente pas de composer les équipes et de mener les briefs : elle est souvent elle-même l'hôtesse de nos événements — animations en galerie, opérations à thème, remises de dotations. C'est cette pratique du terrain qui lui permet de choisir le bon profil pour votre mission, de briefer juste, et d'exiger de ses équipes ce qu'elle s'applique d'abord à elle-même.</p>
       </div>
       <div class="trio">
-        <figure><img src="images/hotesse-festival-animation-galerie-reunion.jpg" alt="Hôtesse lors d'un festival d'animation en galerie marchande à La Réunion" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Festival en galerie</figcaption></figure>
+        <figure><img src="images/hotesse-festival-animation-galerie-reunion.webp" alt="Hôtesse lors d'un festival d'animation en galerie marchande à La Réunion" loading="lazy" decoding="async" width="900" height="1600"><figcaption>Festival en galerie</figcaption></figure>
         <figure><img src="images/hotesse-robe-rose-evenement-galerie-reunion.jpg" alt="Hôtesse en robe rose lors d'un événement en galerie marchande 974" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Tenue à thème</figcaption></figure>
         <figure><img src="images/hotesse-offre-rose-cliente-fete-meres-974.jpg" alt="Hôtesse offrant une rose à une cliente pour la fête des mères à La Réunion" loading="lazy" decoding="async" width="900" height="1200"><figcaption>Le geste qui touche</figcaption></figure>
       </div>
@@ -440,7 +442,7 @@ footer a{text-decoration:underline}
       <figure class="oeuvre"><div class="ph"><img width="900" height="1192" src="images/hotesse-stand-degustation-produits-974.webp" alt="Hôtesse sur un stand de dégustation de produits locaux à La Réunion" loading="lazy"></div><figcaption>Dégustation péi</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="1200" height="900" src="images/hotesse-jeu-coffre-fort-animation-974.webp" alt="Hôtesse animant un jeu du coffre-fort en centre commercial à La Réunion" loading="lazy"></div><figcaption>Jeu du coffre-fort</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="1200" height="900" src="images/animation-coffre-fort-gagnant-galerie-reunion.webp" alt="Gagnant d'un jeu coffre-fort avec l'hôtesse en galerie marchande à La Réunion" loading="lazy"></div><figcaption>Et le coffre s'ouvre</figcaption></figure>
-      <figure class="oeuvre"><div class="ph"><img width="900" height="1258" src="images/hotesse-robe-longue-animation-commerciale-974.jpg" alt="Hôtesse en robe longue lors d'une animation commerciale à La Réunion" loading="lazy"></div><figcaption>Élégance créole</figcaption></figure>
+      <figure class="oeuvre"><div class="ph"><img width="900" height="1258" src="images/hotesse-robe-longue-animation-commerciale-974.webp" alt="Hôtesse en robe longue lors d'une animation commerciale à La Réunion" loading="lazy"></div><figcaption>Élégance créole</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1190" src="images/hotesse-club-enfants-ours-geant-reunion.jpg" alt="Hôtesse du club enfants avec un ours géant lors d'une animation à La Réunion" loading="lazy"></div><figcaption>Club enfants</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="900" height="1200" src="images/hotesse-distribution-flyers-galerie-reunion.jpg" alt="Hôtesse distribuant des flyers devant une vitrine en galerie à La Réunion" loading="lazy"></div><figcaption>Distribution ciblée</figcaption></figure>
       <figure class="oeuvre"><div class="ph"><img width="540" height="460" src="images/hotesse-conseil-cliente-animation-reunion.jpg" alt="Hôtesse conseillant une cliente lors d'une animation à La Réunion" loading="lazy"></div><figcaption>Écoute &amp; conseil</figcaption></figure>
