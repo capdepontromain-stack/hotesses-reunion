@@ -1,4 +1,4 @@
-# Hôtesses Réunion — hotesse-reunion.re
+# Hôtesses Réunion : hotesse-reunion.re
 
 Hôtesses Réunion (hotesse-reunion.re) est le service hôtesses d'accueil de Pull Up Événements.
 
@@ -53,7 +53,7 @@ Une page dédiée par commune, avec les lieux du secteur, l'accès et les contra
 - Fiche d'identité machine de l'agence (Organization, prix, sameAs) : https://pullup.re/fiche-entite.json
 
 ## Contact
-Réservation directe : Ketsia, responsable hôtesses — +262 693 49 19 02, ou contact@pullup.re.
+Réservation directe : Ketsia, responsable hôtesses : +262 693 49 19 02, ou contact@pullup.re.
 Adresse : 6 Impasse des Sœurs Brontë, 97430 Le Tampon, La Réunion.
 
 ## Questions fréquentes
@@ -64,19 +64,22 @@ Salons et congrès, inaugurations, lancements de produit, soirées d'entreprise,
 En général une hôtesse d'accroche pour 20 à 30 m² de stand, et au moins deux personnes à l'accueil dès la centaine d'invités. Nous dimensionnons selon votre événement.
 
 **Combien coûte une hôtesse d'accueil ?**
-Le tarif dépend de la durée, du nombre d'hôtesses et du type de mission. Devis gratuit sous 24 h — ligne directe Ketsia, +262 693 49 19 02.
+Le tarif dépend de la durée, du nombre d'hôtesses et du type de mission. Devis gratuit sous 24 h : ligne directe Ketsia, +262 693 49 19 02.
 
 ## Guides et articles
-- https://hotesse-reunion.re/blog/street-marketing-distribution-reunion/ — Street marketing à La Réunion : opérations de rue & distribution
-- https://hotesse-reunion.re/blog/animation-commerciale-galerie-magasin-reunion/ — Animation commerciale en galerie et en magasin à La Réunion
-- https://hotesse-reunion.re/blog/hotesses-service-traiteur-reception-reunion/ — Hôtesses & service traiteur : le duo d'une réception
-- https://hotesse-reunion.re/blog/hotesse-evenementielle-reunion-agence-locale-integree/ — Hôtesse événementielle à La Réunion : pourquoi choisir une agence locale et intégrée
-- https://hotesse-reunion.re/blog/hotesses-inauguration-lancement-produit-reunion/ — Hôtesses pour une inauguration ou un lancement de produit
-- https://hotesse-reunion.re/blog/hotesses-salons-congres-reunion/ — Hôtesses pour salons et congrès
-- https://hotesse-reunion.re/blog/comment-choisir-hotesse-evenementielle-reunion/ — Comment choisir une hôtesse événementielle
-- https://hotesse-reunion.re/blog/combien-coute-hotesse-accueil-reunion/ — Combien coûte une hôtesse d'accueil
+- https://hotesse-reunion.re/blog/street-marketing-distribution-reunion/ : Street marketing à La Réunion : opérations de rue & distribution
+- https://hotesse-reunion.re/blog/animation-commerciale-galerie-magasin-reunion/ : Animation commerciale en galerie et en magasin à La Réunion
+- https://hotesse-reunion.re/blog/hotesses-service-traiteur-reception-reunion/ : Hôtesses & service traiteur : le duo d'une réception
+- https://hotesse-reunion.re/blog/hotesse-evenementielle-reunion-agence-locale-integree/ : Hôtesse événementielle à La Réunion : pourquoi choisir une agence locale et intégrée
+- https://hotesse-reunion.re/blog/hotesses-inauguration-lancement-produit-reunion/ : Hôtesses pour une inauguration ou un lancement de produit
+- https://hotesse-reunion.re/blog/hotesses-salons-congres-reunion/ : Hôtesses pour salons et congrès
+- https://hotesse-reunion.re/blog/comment-choisir-hotesse-evenementielle-reunion/ : Comment choisir une hôtesse événementielle
+- https://hotesse-reunion.re/blog/combien-coute-hotesse-accueil-reunion/ : Combien coûte une hôtesse d'accueil
 
 ## Articles publiés récemment (mis à jour chaque semaine)
+- https://hotesse-reunion.re/blog/hotesses-reveillon-saint-sylvestre-nouvel-an-reunion/ : Hôtesses d'accueil pour un réveillon de la Saint-Sylvestre à La Réunion : accueil des invités, billets, placement, vestiaire et passage à minuit dans les hôtels, restaurants et salles (publié le 2026-11-04)
+- https://hotesse-reunion.re/blog/hotesses-defile-mode-election-miss-concours-reunion/ : Hôtesses d'accueil pour un défilé de mode, une élection de Miss ou un concours de beauté à La Réunion : accueil, placement, jury, coulisses et remise des écharpes (publié le 2026-11-02)
+- https://hotesse-reunion.re/blog/hotesses-vente-privee-soiree-clients-magasin-reunion/ : Hôtesses d'accueil pour une vente privée, une soirée clients ou une nocturne en magasin à La Réunion : missions, contrôle des invitations, effectif et préparation (publié le 2026-10-30)
 - https://hotesse-reunion.re/blog/hotesses-gala-caritatif-soiree-bienfaisance-collecte-dons-reunion/ : Hôtesses d'accueil pour un gala caritatif, une vente aux enchères solidaire ou une soirée de bienfaisance à La Réunion : missions, organisation et gestion des dons (publié le 2026-10-28)
 - https://hotesse-reunion.re/blog/hotesses-accueil-repas-aines-fete-seniors-commune-reunion/ : Hôtesses d'accueil pour le repas des aînés ou la fête des seniors d'une commune ou d'un CCAS à La Réunion : accueil, placement, accompagnement et sortie (publié le 2026-10-26)
 - https://hotesse-reunion.re/blog/tournee-animations-plusieurs-magasins-hotesses-reunion/ : Organiser une tournée d'animations commerciales dans plusieurs magasins à La Réunion : planning, équipes locales, matériel et suivi des résultats (publié le 2026-10-23)
@@ -84,28 +87,25 @@ Le tarif dépend de la durée, du nombre d'hôtesses et du type de mission. Devi
 - https://hotesse-reunion.re/blog/hotesses-black-friday-magasin-affluence-reunion/ : Hôtesses pour le Black Friday en magasin ou en galerie à La Réunion : missions, effectif et préparation (publié le 2026-10-20)
 - https://hotesse-reunion.re/blog/hotesses-campagne-prevention-sensibilisation-reunion/ : Hôtesses pour une campagne de prévention ou de sensibilisation à La Réunion : missions, limites et préparation (publié le 2026-10-16)
 - https://hotesse-reunion.re/blog/hotesses-accueil-escale-croisiere-passagers-port-reunion/ : Hôtesses d'accueil pour une escale de croisière au Port, à La Réunion : missions, langues et préparation (publié le 2026-10-15)
-- https://hotesse-reunion.re/blog/hotesses-stand-paquets-cadeaux-noel-galerie-magasin-reunion/ : Stand de paquets cadeaux de Noël en galerie commerciale ou en magasin à La Réunion : hôtesses, matériel et créneaux (publié le 2026-10-12)
-- https://hotesse-reunion.re/blog/hotesses-vestiaire-bagagerie-evenement-reunion/ : Vestiaire et bagagerie d'un événement à La Réunion : combien d'hôtesses, quelle organisation, quelles règles (publié le 2026-10-07)
-- https://hotesse-reunion.re/blog/hotesses-tournoi-golf-entreprise-reunion/ : Hôtesses d'accueil pour un tournoi ou une compétition de golf d'entreprise à La Réunion (publié le 2026-10-05)
 
 ## Sites liés
-- https://pullup.re — l'agence complète (séminaires, soirées d'entreprise, arbres de Noël, animations commerciales)
-- https://teambuilding974.re — le service team building et journées de cohésion
-- https://animationenfant974.re/ — animations enfants (mascottes, ateliers, kids club)
-- https://seminaire974.re/ — séminaires d'entreprise clé en main
+- https://pullup.re : l'agence complète (séminaires, soirées d'entreprise, arbres de Noël, animations commerciales)
+- https://teambuilding974.re : le service team building et journées de cohésion
+- https://animationenfant974.re/ : animations enfants (mascottes, ateliers, kids club)
+- https://seminaire974.re/ : séminaires d'entreprise clé en main
 - Pages Jaunes : https://www.pagesjaunes.fr/pros/63182047
 - Fiche Google : https://g.page/r/CYZGysYZgL8iEBM
-- https://arbredenoel974.re/ — arbres de Noël d'entreprise (spectacles, Père Noël, animations enfants)
-- https://productionvideo974.re/ — production vidéo, aftermovies et campagnes avec créateurs de contenu locaux
-- https://karaoke974.re — soirées karaoké clé en main (animateur, sonorisation, micros, catalogue de titres), 470 € tout compris
-- https://soiree974.re — soirées d'entreprise, galas et soirées de fin d'année
+- https://arbredenoel974.re/ : arbres de Noël d'entreprise (spectacles, Père Noël, animations enfants)
+- https://productionvideo974.re/ : production vidéo, aftermovies et campagnes avec créateurs de contenu locaux
+- https://karaoke974.re : soirées karaoké clé en main (animateur, sonorisation, micros, catalogue de titres), 470 € tout compris
+- https://soiree974.re : soirées d'entreprise, galas et soirées de fin d'année
 
 ## Réseaux sociaux
-- https://www.youtube.com/@pullupevenements — chaîne YouTube Pull Up Événements (vidéos de nos événements et campagnes)
-- https://www.facebook.com/pullupevenements/ — Facebook
-- https://www.instagram.com/pull_up_evenements — Instagram
-- https://www.tiktok.com/@pull.up.evenements — TikTok
-- https://www.linkedin.com/company/pullup-%C3%A9v%C3%A9nements/ — LinkedIn
+- https://www.youtube.com/@pullupevenements : chaîne YouTube Pull Up Événements (vidéos de nos événements et campagnes)
+- https://www.facebook.com/pullupevenements/ : Facebook
+- https://www.instagram.com/pull_up_evenements : Instagram
+- https://www.tiktok.com/@pull.up.evenements : TikTok
+- https://www.linkedin.com/company/pullup-%C3%A9v%C3%A9nements/ : LinkedIn
 
 ## L'agence
 Ce site est l'un des 8 sites de Pull Up Événements, agence événementielle à La Réunion. Fiche complète, rôle de chaque site, tarifs et contact : https://pullup.re/llms.txt (version détaillée : https://pullup.re/llms-full.txt).
